@@ -163,11 +163,10 @@ box-shadow:
 
 .signature {
 
-   position:absolute;
-    text-align:left;
-    right:-50px;
-    left:20px;
-    top: 660px;
+   position:fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
     color: #fff;
     font-size: 14px;
     letter-spacing: 3px;
@@ -176,6 +175,7 @@ box-shadow:
     transition: .4s;
     cursor: pointer;
     z-index: 100;
+
 
 }
 
