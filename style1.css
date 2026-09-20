@@ -176,7 +176,6 @@ box-shadow:
     cursor: pointer;
     z-index: 100;
 
-
 }
 
 .signature span {
@@ -1835,7 +1834,7 @@ GLASSMORPHISM LETTER
 /* Intro Text Centering */
 .s5-intro {
     position: absolute;
-    top: 9%;
+    top: 3%;
     left: 50%;
     transform: translate(-50%, 20px);
     margin: 0;
@@ -1947,7 +1946,7 @@ GLASSMORPHISM LETTER
 .s5-birthday {
     position: absolute;
 
-    top: 27%;
+    top: 24%;
 
     width: 100%;
 
@@ -2340,7 +2339,7 @@ z-index:10;
 .s5-final-message {
     position: absolute;
 
-    top: 72%;
+    top: 74%;
 
     width: 100%;
 
@@ -2588,7 +2587,7 @@ transition:
 
     position:absolute;
 
-    top:30px;
+    top:50px;
 
     right:35px;
 
@@ -2658,7 +2657,7 @@ transition:
 
     letter-spacing:8px;
 
-    margin-bottom:25px;
+    margin-top:-1%;
 
 }
 
