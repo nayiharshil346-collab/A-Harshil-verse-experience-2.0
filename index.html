@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Harshil Verse Experience 2.0</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Pink Wing Gradients -->
+    <linearGradient id="wingGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffc4e8" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#ff5ca8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#ff4d94" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="wingGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#ff8ccf" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#d81b60" stop-opacity="0.95" />
+    </linearGradient>
+
+    <radialGradient id="bodyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a1525" />
+      <stop offset="100%" stop-color="#120408" />
+    </radialGradient>
+
+    <filter id="pinkGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Master Realistic Butterfly Template -->
+    <g id="realistic-butterfly">
+      <!-- Antennae -->
+      <path d="M -0.5,-12 C -2,-20 -8,-26 -12,-28 M 0.5,-12 C 2,-20 8,-26 12,-28" 
+            stroke="#2d0a14" stroke-width="1" stroke-linecap="round" fill="none" />
+      <circle cx="-12" cy="-28" r="1.2" fill="#ff8ccf" />
+      <circle cx="12" cy="-28" r="1.2" fill="#ff8ccf" />
+
+      <!-- Left Forewing -->
+      <g class="wing left-wing">
+        <path d="M -1,-10 C -18,-38 -65,-48 -70,-20 C -73,-2 -55,18 -1,2 Z" 
+              fill="url(#wingGrad1)" filter="url(#pinkGlow)" />
+        <!-- Wing Veins -->
+        <path d="M -2,-8 C -20,-25 -45,-30 -62,-20 M -2,-8 C -25,-12 -50,-2 -58,10 M -2,-8 C -15,-20 -35,-38 -45,-40" 
+              stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.5" fill="none" />
+        <path d="M -1,-10 C -18,-38 -65,-48 -70,-20 C -73,-2 -55,18 -1,2 Z" 
+              stroke="#ffc4e8" stroke-width="1" stroke-opacity="0.6" fill="none" />
+      </g>
+
+      <!-- Right Forewing -->
+      <g class="wing right-wing">
+        <path d="M 1,-10 C 18,-38 65,-48 70,-20 C 73,-2 55,18 1,2 Z" 
+              fill="url(#wingGrad1)" filter="url(#pinkGlow)" />
+        <!-- Wing Veins -->
+        <path d="M 2,-8 C 20,-25 45,-30 62,-20 M 2,-8 C 25,-12 50,-2 58,10 M 2,-8 C 15,-20 35,-38 45,-40" 
+              stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.5" fill="none" />
+        <path d="M 1,-10 C 18,-38 65,-48 70,-20 C 73,-2 55,18 1,2 Z" 
+              stroke="#ffc4e8" stroke-width="1" stroke-opacity="0.6" fill="none" />
+      </g>
+
+      <!-- Left Hindwing -->
+      <g class="wing left-wing">
+        <path d="M -1,0 C -35,10 -45,38 -25,48 C -8,53 -2,28 -1,5 Z" 
+              fill="url(#wingGrad2)" filter="url(#pinkGlow)" />
+        <path d="M -2,2 C -20,18 -32,32 -22,42" 
+              stroke="#ffffff" stroke-width="0.7" stroke-opacity="0.4" fill="none" />
+      </g>
+
+      <!-- Right Hindwing -->
+      <g class="wing right-wing">
+        <path d="M 1,0 C 35,10 45,38 25,48 C 8,53 2,28 1,5 Z" 
+              fill="url(#wingGrad2)" filter="url(#pinkGlow)" />
+        <path d="M 2,2 C 20,18 32,32 22,42" 
+              stroke="#ffffff" stroke-width="0.7" stroke-opacity="0.4" fill="none" />
+      </g>
+
+      <!-- Body -->
+      <ellipse cx="0" cy="0" rx="2.5" ry="16" fill="url(#bodyGrad)" />
+      <ellipse cx="0" cy="-14" rx="3.5" ry="3.5" fill="#2d0a14" />
+    </g>
+  </defs>
+</svg>
+<canvas id="particles"></canvas>
+
+<div class="background"></div>
+
+<div class="particles"></div>
+
+<section class="intro">
+
+<p class="small-text">
+Something special is waiting for you...                                                      
+</p>
+
+<h1>
+Who is this surprise for?
+</h1>
+
+<div class="input-box">
+
+<input
+type="text"
+id="receiverName"
+placeholder="Someone Special"
+
+/>
+
+</div>
+
+<button id="continueBtn">
+
+Continue →
+
+</button>
+<div class="signature">
+    BUILT BY HARSHIL VERSE</div>
+
+</section>
+<!-- ===========================
+        SCREEN 2
+=========================== -->
+
+<section class="screen2 hidden">
+
+    <p class="story line1">Every beautiful story...</p>
+
+    <h1 class="story line2">...begins with a name</h1>
+
+    <div class="name-wrapper">
+        <h2 id="displayName"></h2>
+        <div class="name-shine"></div>
+    </div>
+
+    <div class="sparkles"></div>
+
+    <div class="loadingText"></div>
+
+</section>
+<!-- ===========================
+        SCREEN 3
+=========================== -->
+<section class="screen3 hidden">
+<canvas id="roseCanvas"></canvas>
+    <p class="s3-line s3-1">
+        Some moments...
+    </p>
+
+    <h1 class="s3-line s3-2">
+        are too special for ordinary words.
+    </h1>
+
+    <p class="s3-line s3-3">
+       Some words are quickly forgotten...
+    </p>
+
+    <h1 class="s3-line s3-4">
+        while some become memories of their own
+    </h1>
+
+    <p class="s3-line s3-5">
+        And sometimes, a little thought can change a moment...
+    </p>
+
+    <h1 class="s3-line s3-6">
+        into something worth remembering forever
+    </h1>
+
+    <h1 class="ready hidden">
+        This is just for you
+    </h1>
+
+
+</section>
+<!-- ===========================
+        SCREEN 4
+=========================== -->
+
+<canvas id="magic-particle-canvas" class="magic-stage"></canvas>
+<div id="butterfly-viewport" class="butterfly-viewport magic-stage"></div>
+
+<!-- ... baki screens ... -->
+
+<!-- SCREEN 4 -->
+<section class="screen4 hidden">
+    <div class="birthdayGlow"></div>
+
+    <h1 class="screen4Line1" id="beforeContinue">Before you continue...</h1>
+    <h2 class="screen4Line2">There's something waiting just for you.</h2>
+
+    <button id="open-letter-btn" class="cinematic-btn openLetter">
+        <span class="btn-glow-bg"></span>
+        <span class="btn-text">Open Your Surprise✨</span>
+    </button>
+
+<div id="magic-stage-container" class="magic-stage">
+  <canvas id="magic-particle-canvas"></canvas>
+  <div id="butterfly-viewport" class="butterfly-viewport"></div>
+
+  <!-- Cinematic Letter Envelope & Paper -->
+  <div id="cinematic-envelope-wrapper" class="envelope-wrapper">
+    <div class="envelope">
+      <div class="envelope-back"></div>
+      
+      <!-- Letter 1 -->
+      <div class="letter-paper active-letter" id="letter-paper-1">
+        <div class="letter-content">
+          <h1>Dearest,</h1>
+          <p>Some people simply make the world feel a little brighter. Today is your day, and I just wanted to remind you how special you are. May this year bring countless smiles, unforgettable memories, and happiness that stays with you every single day. Keep shining.</p>
+          <div class="signature">
+            <span id="letterSignature">-Harshil Verse ✨</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Letter 2 -->
+      <div class="letter-paper" id="letter-paper-2">
+        <div class="letter-content">
+          <h1>To a Beautiful Soul,</h1>
+          <p>On your special day, I hope you pause to see how much light you bring to those around you. Never stop dreaming, laughing, and chasing the things that make your heart sing. You deserve all the magical moments today and always.</p>
+          <div class="signature">
+            <span>-Harshil Verse ✨</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Letter 3 -->
+      <div class="letter-paper" id="letter-paper-3">
+        <div class="letter-content">
+          <h1>A Special Note,</h1>
+          <p>Life is built on small, cherished moments, and having you in this world makes it genuinely richer. May your coming year be filled with exciting adventures, peaceful days, and endlessly warm laughter.</p>
+          <div class="signature">
+            <span>-Harshil Verse ✨</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Letter 4 -->
+      <div class="letter-paper" id="letter-paper-4">
+        <div class="letter-content">
+          <h1>Warm Wishes,</h1>
+          <p>Here’s to another year of wonderful growth, unforgettable victories, and endless happiness. May all your silent prayers find their answers and all your bright dreams come true.</p>
+          <div class="signature">
+            <span>-Harshil Verse ✨</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Letter 5 -->
+      <div class="letter-paper" id="letter-paper-5">
+        <div class="letter-content">
+          <h1>Always Remember,</h1>
+          <p>No matter where life takes you, remember how extraordinary you are. Keep radiating grace, warmth, and joy. Wishing you the happiest birthday ever!</p>
+          <div class="signature">
+            <span>-Harshil Verse ✨</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="envelope-cover"></div>
+    </div>
+
+    <!-- Letter Navigation Controls -->
+    <div class="letter-nav-controls hidden" id="letter-nav-controls">
+    <button id="prev-letter-btn" class="nav-btn" disabled>← Prev</button>
+    <span id="letter-counter">1 / 5</span>
+    <button id="next-letter-btn" class="nav-btn">Next →</button>
+    <button id="screen6-trigger-btn" class="nav-btn screen6-btn hidden">Continue ✨</button>
+    
+</div>
+</section>
+
+
+
+<!-- ==============================
+        SCREEN 5 — FINAL REVEAL
+================================= -->
+
+<section class="screen5 hidden" id="screen5">
+
+    <!-- Background -->
+    <div class="s5-background"></div>
+
+    <!-- Ambient Glow -->
+    <div class="s5-glow s5-glow-1"></div>
+    <div class="s5-glow s5-glow-2"></div>
+
+    <!-- Existing butterflies -->
+   
+  <div id="feedbackRoseParticles"></div>
+
+    <!-- Main Content -->
+    <div class="s5-content">
+
+        <!-- Small cinematic intro -->
+        <p class="s5-intro" id="s5Intro">
+          And now,<br>
+          a moment just for you...
+        </p>
+  <!-- Falling Confetti Canvas -->
+   
+        <!-- Birthday Message -->
+        <div class="s5-birthday" id="s5BirthdayBox">
+            <h1 id="s5HappyBirthday">
+                Happy Birthday ✨
+            </h1>
+           <div id="s5Name" class="name-wrapper">
+    <h2 id="s5ReceiverName"></h2>
+    <div class="name-shine" ></div>
+ <div class="final-line"></div>
+</div>
+            <p id="s5Subtitle">
+                May your story ahead be even more beautiful.
+            </p>
+        </div>
+
+        <!-- Final Message -->
+        <div class="s5-final-message" id="s5FinalMessage">
+            <p>Some moments are created.</p>
+            <p>Some are remembered.</p>
+            <p>And some...</p>
+            <p class="s5-final-highlight">
+                are simply felt. 
+            </p>
+        </div>
+
+       </section>
+
+                
+                <!-- Feedback & Info -->
+
+
+<div id="aboutBtn" class="about-btn">
+    FEEDBACK ✦ INFO
+</div>
+
+<!-- ABOUT OVERLAY -->
+
+<div id="aboutOverlay" class="about-overlay">
+
+   
+    <div class="particles">
+
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+
+    </div>
+
+    <button id="closeAbout" class="close-about">
+        ✕
+    </button>
+
+<div id="feedbackRoseParticles"></div>
+
+<div class="about-content">
+
+    <div class="about-title">
+        FEEDBACK ✦ INFO
+    </div>
+
+    <div class="about-line"></div>
+
+    <div class="developer-name">
+        Harshil  Nayi
+    </div>
+
+    <div class="developer-role">
+    The Developer Behind <br> A Harshil Verse Experience 2.0
+    </div>
+
+<div class="developer-links">
+
+    <a href="https://www.instagram.com/harshil_verse_/"
+    target="_blank">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <span>@harshil_verse_</span>
+
+    </a>
+
+
+    <a href="https://www.linkedin.com/in/harshil-nayi-213452378"
+    target="_blank">
+
+        <i class="fa-brands fa-linkedin-in"></i>
+
+        <span>Harshil Nayi</span>
+
+    </a>
+
+
+<a role="button" style="cursor: default;">
+        
+    <i class="fa-brands fa-google"></i>
+
+        <span>nayiharshil346@gmail.com</span>
+
+    </a>
+
+</div>
+
+    <div class="feedback-heading">
+
+        Rate Your Experience
+
+    </div>
+
+    <div class="stars">
+
+        <span data-rating="1">★</span>
+        <span data-rating="2">★</span>
+        <span data-rating="3">★</span>
+        <span data-rating="4">★</span>
+        <span data-rating="5">★</span>
+
+    </div>
+
+    <textarea
+        id="feedbackMessage"
+        placeholder="Share your thoughts..."></textarea>
+
+    <button id="sendFeedback">
+
+        Submit 
+
+    </button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script1.js"></script>
+
+</body>
+</html>
